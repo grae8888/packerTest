@@ -1,0 +1,12 @@
+name: 'packer build'
+on: push
+jobs:
+  build-ami:
+    name: build packer
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: 'actions/checkout@v3'
+
+    - name: init
+      run: packer init .
